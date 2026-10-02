@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500;700&family=Nunito:wght@500;700;800&family=VT323&display=swap');
+
+:root {
+  --ink: #4a3b32;   /* texto: marrón cálido */
+  --paper: #fffbf3; /* papel de las tarjetas */
+  --line: #e9d6be;  /* contorno y sombra "dura" de tarjetas y botones */
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  color: var(--ink);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+  overscroll-behavior: none;
+  height: 100vh; /* respaldo */
+  height: 100dvh;
+}
+
+/* Títulos y reloj: redondeada y gordita */
+.font-display {
+  font-family: 'DynaPuff', 'Nunito', system-ui, sans-serif;
+}
+
+.font-digital {
+  font-family: 'VT323', monospace;
+}
+
+@layer components {
+  /* Tarjeta tipo "pegatina": papel cálido, contorno y sombra dura */
+  .ui-card {
+    background: rgb(255 251 243 / 0.93);
+    color: var(--ink);
+    border: 2px solid var(--line);
+    border-radius: 22px;
+    box-shadow: 0 4px 0 var(--line), 0 12px 24px rgb(120 80 40 / 0.12);
+    backdrop-filter: blur(6px);
+  }
+
+  /* Botón que se "hunde" al presionarlo */
+  .ui-btn {
+    border: 2px solid var(--line);
+    box-shadow: 0 3px 0 var(--line);
+    transition: transform 0.08s, box-shadow 0.08s, background-color 0.15s;
+  }
+  .ui-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 var(--line);
+  }
+}

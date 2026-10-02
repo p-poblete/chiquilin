@@ -24,7 +24,7 @@ import corbatinRojo from '../assets/accessories/accesorio_corbatin_rojo.png';
 
 // Items interactivos
 import churu from '../assets/items/churu.png';
-import cana from '../assets/items/caña.png';
+import cana from '../assets/items/cana.png';
 import cepillo from '../assets/items/cepillo.png';
 
 // Tamaños de visualización (px). "desktop" = PC, tablet y móvil en horizontal;
